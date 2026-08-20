@@ -1,0 +1,19 @@
+{
+  "name": "task-management-system",
+  "version": "1.0.0",
+  "description": "Full-stack Task Management System with Node.js and React",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client --include=dev",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server",
+    "start:prod": "npm run start-migrate --prefix server",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run start --prefix server",
+    "dev:client": "npm run dev --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "license": "ISC"
+}

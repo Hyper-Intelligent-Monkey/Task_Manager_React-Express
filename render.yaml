@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: task-management-system
+    runtime: node
+    plan: free
+    buildCommand: npm run install-all && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: VITE_API_URL
+        value: /api

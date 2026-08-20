@@ -1,0 +1,29 @@
+{
+  "name": "task-management-api",
+  "version": "1.0.0",
+  "description": "API for Task Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-migrate": "npm run migrate:up && node server.js",
+    "migrate:up": "npx node-pg-migrate up --migrations-dir src/Database/Migrations",
+    "migrate:down": "npx node-pg-migrate down --migrations-dir src/Database/Migrations",
+    "migrate:create": "npx node-pg-migrate create --migrations-dir src/Database/Migrations",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vinn Runkee J. Ca",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "helmet": "^8.3.0",
+    "morgan": "^1.11.0",
+    "node-pg-migrate": "^9.0.0",
+    "pg": "^8.23.0",
+    "zod": "^4.4.3"
+  }
+}

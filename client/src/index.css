@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --text: #6b6375;
+  --text-black: #08060d;
+  --selection-color: var(--text-black);
+  --accent: hsl(200, 100%, 50%);
+  --bg-1: hsl(0, 0%, 96%);
+  
+  --nav-bg: hsl(0, 0%, 100%);
+  --nav-border: hsl(0, 0%, 90%);
+  --card-bg: hsl(0, 0%, 98%);
+  --card-border: hsl(0, 0%, 88%);
+
+  /* Typography */
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --base-unit: 4px;
+  
+  --font-base: calc(var(--base-unit) * 4);
+  --font-xl: calc(var(--base-unit) * 6);
+  --font-3xl: calc(var(--base-unit) * 12);
+  --font-4xl: calc(var(--base-unit) * 14);
+
+  font-family: var(--sans);
+  font-size: var(--font-base);
+  color: var(--text);
+  background-color: var(--bg-1);
+}
+
+html, body, #root {
+  min-height: auto;
+  margin: 0;
+}
+
+h1 { font-size: var(--font-4xl); color: var(--text-black); font-weight: 700; }
+h2 { font-size: var(--font-xl); color: var(--text-black); font-weight: 600; }
