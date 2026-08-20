@@ -1,6 +1,6 @@
 # Task Management System
 
-This is a full-stack task management application system. Where anyone can access and modify the contents. This allows for Search filtering
+This is a task management application system for listing and browsing tasks that includes the frontend and backend. 
 
 ## Features
 
@@ -12,6 +12,11 @@ This is a full-stack task management application system. Where anyone can access
   - Parameterized SQL queries to prevent SQL Injection.
   - Security headers via `Helmet`.
 - **Unified Deployment**
+
+---
+## Limitations
+
+This can only manage tasks, and anyone can add, update, and delete a task. There is no Authentication or Registration so anyone who has access to this can modify the contents. Feel free to use this on your project or modify or append to the functionalities.
 
 ---
 
