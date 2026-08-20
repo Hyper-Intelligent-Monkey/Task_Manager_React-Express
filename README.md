@@ -14,6 +14,7 @@ This is a task management application system for listing and browsing tasks that
 - **Unified Deployment**
 
 ---
+
 ## Limitations
 
 This can only manage tasks, and anyone can add, update, and delete a task. There is no Authentication or Registration so anyone who has access to this can modify the contents. Feel free to use this on your project or modify or append to the functionalities.
@@ -87,7 +88,9 @@ After finishing the setup instruction, this will run both client and server:
 ```bash
 npm run dev
 ```
+
 ---
+
 ## Deploying to Render
 This project includes a `render.yaml` file for easy deployment on [Render](https://render.com).
 
