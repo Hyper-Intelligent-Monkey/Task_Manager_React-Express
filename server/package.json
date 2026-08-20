@@ -1,7 +1,7 @@
 {
-  "name": "task-management-api",
+  "name": "server",
   "version": "1.0.0",
-  "description": "API for Task Management System",
+  "description": "This is the server or api of a task management system",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Vinn Runkee J. Ca",
+  "author": "Vinn Runkee J. Cañares",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

@@ -1,6 +1,6 @@
 # Task Management System
 
-A full-stack task management application built with Node.js, Express, PostgreSQL, and React (Vite).
+This is a full-stack task management application system. Where anyone can access and modify the contents. This allows for Search filtering
 
 ## Features
 
@@ -11,21 +11,29 @@ A full-stack task management application built with Node.js, Express, PostgreSQL
 - **Security**: 
   - Parameterized SQL queries to prevent SQL Injection.
   - Security headers via `Helmet`.
-  - CORS configured for specific origins.
 - **Unified Deployment**
+
+---
+
+## To Clone
+```bash
+
+git clone https://github.com/Hyper-Intelligent-Monkey/Task_Manager_React-Express.git
+
+```
 
 ---
 
 ## Tech Stack
 
 ### Backend
+- JavaScript
 - Node.js
 - Express
 - PostgreSQL
 - Database migrations using "node-pg-migrate".
 - Zod
 - Morgan
-- Cors
 - Helmet
 
 ### Frontend
@@ -33,59 +41,57 @@ A full-stack task management application built with Node.js, Express, PostgreSQL
 - Vite
 - TypeScript
 - Tailwind CSS
+- CSS
 
 ---
 
 ## Setup Instructions
 
 ### 1. Prerequisites
-- Node.js (v18+)
-- PostgreSQL installed and running.
+- **Node.js**: (v18+)
+- **PostgreSQL**: Installed and running locally or a remote instance (e.g., Supabase, Neon).
 
-### 2. Database Setup
-Create a PostgreSQL database and run the migrations:
+### 2. Install Dependencies
+To install dependencies for both the root, client, and server run this in **root**:
 ```bash
-# Navigate to server
-cd server
-# Create your .env file (see Environment Variables section)
-# Run migrations
-npm run migrate:up
-```
-
-### 3. Install Dependencies
-From the **root directory**, run the helper command:
-```bash
-# if not in root
-cd ..
-
 npm run install-all
 ```
 
+### 3. Environment Variables
+Remove the `.example ` from the `.env.example` files in both `client/` and `server/`.
+
+#### Server (`server/.env`)
+```env
+# replace this with details from your postgre provider
+DATABASE_URL=postgres://user:password@localhost:5432/database_name
+```
+
+### 4. Database Migrations
+Run the migrations to set up the database schema:
+```bash
+# From the root directory
+npm run migrate:up --prefix server
+```
+
 ---
 
-## Environment Variables
+## Local Development
 
-See the `.env.example` files in both the `client` and `server` directories for the required variables.
+After finishing the setup instruction, this will run both client and server:
 
----
-
-## Running the Application
-
-### Development Mode
-Runs both the React dev server and Express server concurrently:
 ```bash
 npm run dev
 ```
 
-### Production Mode (Single Unit)
-To run the project as a single unit (Express serving React):
-```bash
-# 1. Build the frontend
-npm run build
+### Deploying to Render
+This project includes a `render.yaml` file for easy deployment on [Render](https://render.com).
 
-# 2. Start the unified server
-npm start
-```
+1. Connect your GitHub repository to Render.
+2. In Render go to dashboard.
+3. Go to Blueprints and create a "New Blueprint Instance".
+4. Select your project.
+3. Required Environment Variables on Render:
+   - `DATABASE_URL`: Your PostgreSQL connection string.
 
 ---
 

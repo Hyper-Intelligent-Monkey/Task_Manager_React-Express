@@ -24,14 +24,15 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 */
 
-const client = {
-    origin: process.env.CLIENT_URL,
+// for deploying server and client separately
+const corsOptions = {
+    origin: process.env.CLIENT_URL || true, 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204
 };
+app.use(cors(corsOptions));
 
-app.use(cors(client));
 app.use(express.json());
 
 app.use('/api/tasks', taskRoutes);

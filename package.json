@@ -1,7 +1,7 @@
 {
   "name": "task-management-system",
   "version": "1.0.0",
-  "description": "Full-stack Task Management System with Node.js and React",
+  "description": "Full-stack Task Management System with React and Express on Node.js",
   "private": true,
   "scripts": {
     "install-all": "npm install && npm install --prefix server && npm install --prefix client --include=dev",
@@ -12,6 +12,7 @@
     "dev:server": "npm run start --prefix server",
     "dev:client": "npm run dev --prefix client"
   },
+  "author": "Vinn Runkee J. Cañares",
   "devDependencies": {
     "concurrently": "^9.0.1"
   },

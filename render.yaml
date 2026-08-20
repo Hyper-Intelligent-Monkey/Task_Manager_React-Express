@@ -11,4 +11,7 @@ services:
       - key: DATABASE_URL
         sync: false
       - key: VITE_API_URL
-        value: /api
+        value: /api # This is the base path for the server API, change this if the client and server is deployed separately.
+      # use this if the client and server is deployed separately
+      # - key: CLIENT_URL
+      #   sync: false
