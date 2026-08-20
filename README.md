@@ -82,8 +82,8 @@ After finishing the setup instruction, this will run both client and server:
 ```bash
 npm run dev
 ```
-
-### Deploying to Render
+---
+## Deploying to Render
 This project includes a `render.yaml` file for easy deployment on [Render](https://render.com).
 
 1. Connect your GitHub repository to Render.
