@@ -46,7 +46,8 @@ export default function TaskDetails() {
 
 
     return (
-        <main className="flex-grow max-w-5xl mx-auto w-full px-6 my-6 animate-slide-up">
+        <>
+            <main className="flex-grow max-w-5xl mx-auto w-full px-6 my-6 animate-slide-up">
             {loading ? (
                 <TaskDetailsSkeleton />
             ) : task ? (
@@ -93,14 +94,15 @@ export default function TaskDetails() {
                             </p>
                         </div>
                     )}
-                    
-                    <DeleteModal
-                            isOpen={isDeleteModalOpen}
-                            onClose={() => setIsDeleteModalOpen(false)}
-                            onConfirm={handleDelete}
-                        />
                     </div>
             ) : null}
-        </main>
+            </main>
+
+            <DeleteModal
+                isOpen={isDeleteModalOpen}
+                onClose={() => setIsDeleteModalOpen(false)}
+                onConfirm={handleDelete}
+            />
+        </>
     );
 }
