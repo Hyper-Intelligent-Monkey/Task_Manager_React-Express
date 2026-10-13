@@ -14,7 +14,7 @@
   },
   "author": "Vinn Runkee J. Cañares",
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "concurrently": "^9.2.5"
   },
   "license": "ISC"
 }
